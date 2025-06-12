@@ -16,6 +16,14 @@ Este proyecto es una aplicación React creada con Vite.
    ```
    La aplicación estará disponible en `http://localhost:5173`.
 
+### Entorno Codex
+Si trabajas en un entorno sin acceso a internet ejecuta `./setup.sh` para
+instalar las dependencias desde `package-lock.json`.
+
+```bash
+./setup.sh
+```
+
 ## Compilación
 Para generar los archivos estáticos de producción ejecuta:
 ```bash
