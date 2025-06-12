@@ -30,7 +30,7 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuButtonClick }) => {
 
             <Link to="/" className="flex items-center">
               <img
-                src="/logo.png" // Asegúrate que esta ruta a tu logo sea correcta
+                src="./logo.png" // Ruta al logo relativa para soportar hosting estático
                 alt="Logo del Sistema"
                 className="h-8 w-auto sm:h-9"
               />
