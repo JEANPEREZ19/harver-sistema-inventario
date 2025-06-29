@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "homepage": "https://jeanperez19.github.io/harver-sistema-inventario",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
