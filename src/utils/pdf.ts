@@ -5,9 +5,21 @@ import { format } from 'date-fns';
 import { careerNames } from './mockData';
 
 // Type definition for jspdf-autotable
+// Type definition for jspdf-autotable options
+interface AutoTableOptions {
+  head?: (string | number)[][];
+  body?: (string | number)[][];
+  startY?: number;
+  styles?: Record<string, string | number>;
+  headStyles?: Record<string, string | number>;
+  alternateRowStyles?: Record<string, string | number>;
+  margin?: Record<string, string | number>;
+  // Add other options used by autoTable if necessary
+}
+
 declare module 'jspdf' {
   interface jsPDF {
-    autoTable: (options: any) => jsPDF;
+    autoTable: (options: AutoTableOptions) => jsPDF;
   }
 }
 

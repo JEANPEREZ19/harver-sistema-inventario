@@ -74,7 +74,7 @@ const LoanRecords: React.FC = () => {
       } else {
         toast.error('Error al procesar la devolución');
       }
-    } catch (error) {
+    } catch {
       toast.error('Ha ocurrido un error');
     } finally {
       setIsProcessing(false);
@@ -88,7 +88,7 @@ const LoanRecords: React.FC = () => {
       try {
         await deleteLoan(id);
         toast.success('Registro eliminado correctamente');
-      } catch (error) {
+      } catch {
         toast.error('Ha ocurrido un error');
       } finally {
         setIsProcessing(false);
@@ -103,7 +103,7 @@ const LoanRecords: React.FC = () => {
       try {
         await deleteAllLoans();
         toast.success('Todos los registros han sido eliminados');
-      } catch (error) {
+      } catch {
         toast.error('Ha ocurrido un error');
       } finally {
         setIsProcessing(false);
@@ -125,7 +125,7 @@ const LoanRecords: React.FC = () => {
             : 'Todos'
         }`
       );
-    } catch (error) {
+    } catch {
       toast.error('Error al generar el PDF');
     }
   };

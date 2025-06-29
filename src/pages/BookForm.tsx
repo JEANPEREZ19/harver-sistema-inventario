@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useBookStore } from '../stores/bookStore';
-import { ArrowLeft, Save, BookOpen } from 'lucide-react';
+import { ArrowLeft, Save } from 'lucide-react';
 import { BookFormData, Career } from '../types';
 import { careerNames } from '../utils/mockData';
 import toast from 'react-hot-toast';
@@ -148,7 +148,7 @@ const BookForm: React.FC = () => {
       }
       
       navigate(`/catalog/${formData.career}`);
-    } catch (error) {
+    } catch {
       toast.error('Ha ocurrido un error');
     } finally {
       setIsSubmitting(false);
