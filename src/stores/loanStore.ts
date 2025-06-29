@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { Loan, LoanFormData } from '../types';
+import { Loan, LoanFormData, Student } from '../types';
 import { useBookStore } from './bookStore';
 import { generateMockLoans } from '../utils/mockData';
 
@@ -45,7 +45,7 @@ export const useLoanStore = create<LoanState>()(
           id: crypto.randomUUID(),
           ...loanData,
           book,
-          student: {} as any, // This would be filled in a real application
+          student: {} as Student, // This would be filled in a real application
           status: 'active',
           createdAt: new Date().toISOString(),
           updatedAt: new Date().toISOString(),

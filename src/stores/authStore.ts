@@ -42,7 +42,8 @@ export const useAuthStore = create<AuthState>()(
         
         if (user) {
           // Remove password before storing user data
-          const { password, ...userWithoutPassword } = user;
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
+          const { password: _password, ...userWithoutPassword } = user;
           set({ user: userWithoutPassword, isAuthenticated: true });
           return true;
         }

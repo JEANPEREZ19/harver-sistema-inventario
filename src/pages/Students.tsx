@@ -1,6 +1,6 @@
 // src/pages/Students.tsx
 
-import React, { useMemo, useState, useEffect } from 'react';
+import React, { useMemo, useState } from 'react';
 // No es necesario Link aquí si toda la gestión es modal y no hay navegación a una página de formulario separada.
 // Si necesitas Link para otras cosas (ej. ir a Dashboard), mantenlo.
 // import { Link } from 'react-router-dom'; 
@@ -10,9 +10,7 @@ import {
   Edit, 
   Trash2, 
   Search, 
-  Filter as FilterIcon,
   X,
-  User as UserIcon, // Cambiado para evitar conflicto con el tipo Student
   Briefcase, 
   Hash, 
   Users as UsersIcon, // Para el ícono de "No hay estudiantes"
